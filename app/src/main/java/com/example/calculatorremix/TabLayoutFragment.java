@@ -35,7 +35,7 @@ public class TabLayoutFragment extends Fragment {
         String id = Integer.toString(args.getInt(ARG_ID));
 
         // Display numeric ID in TextView in fragment layout
-        binding.fragmentId.setText(id);
+        //binding.fragmentId.setText(id);
 
     }
 

@@ -8,7 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class TabLayoutAdapter extends FragmentStateAdapter {
 
-    public static final int NUM_TABS = 4;
+    public static final int NUM_TABS = 3;
 
     public TabLayoutAdapter(Fragment fragment) {
         super(fragment);
