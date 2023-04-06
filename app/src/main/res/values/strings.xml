@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CalculatorRemix</string>
+    <string name="fragment_id">#</string>
 </resources>
