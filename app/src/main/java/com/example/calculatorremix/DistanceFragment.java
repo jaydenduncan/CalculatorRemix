@@ -18,6 +18,8 @@ import java.text.DecimalFormat;
 
 public class DistanceFragment extends Fragment {
 
+    public static final String ARG_ID = "id";
+
     private DistanceFragmentBinding binding;
     @Nullable
     @Override
@@ -72,7 +74,8 @@ public class DistanceFragment extends Fragment {
                 catch(Exception e){
                     e.printStackTrace();
                     Toast toast = Toast.makeText(binding.getRoot().getContext(),
-                            "ERROR: Please fill in at least one field.", Toast.LENGTH_LONG);
+                            "ERROR: Please fill in at least one field with a valid number.",
+                            Toast.LENGTH_LONG);
                     toast.show();
                 }
             }
@@ -84,6 +87,7 @@ public class DistanceFragment extends Fragment {
 
         BigDecimal mValueDecimal = new BigDecimal(String.valueOf(mValue));
 
+        // multiply miles value by the miles-to-kilometers constant
         BigDecimal result = mValueDecimal.multiply(new BigDecimal("1.609344"));
         result.setScale(2, RoundingMode.HALF_UP);
 
@@ -94,6 +98,7 @@ public class DistanceFragment extends Fragment {
 
         BigDecimal kValueDecimal = new BigDecimal(String.valueOf(kValue));
 
+        // multiply kilometers value by the kilometers-to-miles constant
         BigDecimal result = kValueDecimal.multiply(new BigDecimal("0.621371"));
         result.setScale(2, RoundingMode.HALF_UP);
 

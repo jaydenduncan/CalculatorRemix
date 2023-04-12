@@ -34,7 +34,6 @@ public class TipFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-
         EditText editText1 = binding.totalBillEditText;
         EditText editText2 = binding.tipPercEditText;
         EditText editText3 = binding.numOfPeopleEditText;
@@ -71,7 +70,8 @@ public class TipFragment extends Fragment {
                 catch(Exception e){
                     e.printStackTrace();
                     Toast toast = Toast.makeText(binding.getRoot().getContext(),
-                            "ERROR: Please fill in all fields.", Toast.LENGTH_LONG);
+                            "ERROR: Please fill in all fields with valid numbers.",
+                            Toast.LENGTH_LONG);
                     toast.show();
                 }
 

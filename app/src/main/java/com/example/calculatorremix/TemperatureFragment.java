@@ -18,6 +18,8 @@ import java.text.DecimalFormat;
 
 public class TemperatureFragment extends Fragment {
 
+    public static final String ARG_ID = "id";
+
     private TemperatureFragmentBinding binding;
     @Nullable
     @Override
@@ -72,7 +74,8 @@ public class TemperatureFragment extends Fragment {
                 catch(Exception e){
                     e.printStackTrace();
                     Toast toast = Toast.makeText(binding.getRoot().getContext(),
-                            "ERROR: Please fill in at least one field.", Toast.LENGTH_LONG);
+                            "ERROR: Please fill in at least one field with a valid number.",
+                            Toast.LENGTH_LONG);
                     toast.show();
                 }
             }

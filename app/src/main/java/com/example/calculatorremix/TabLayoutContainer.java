@@ -41,15 +41,19 @@ public class TabLayoutContainer extends Fragment {
         new TabLayoutMediator(tabLayout, viewPager, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+
+                // Set the tab names
+
                 if(position == 0){
-                    tab.setText("Tip");
+                    tab.setText("Tip\nCalculator");
                 }
                 else if(position == 1){
-                    tab.setText("Temperature");
+                    tab.setText("Temperature\nConverter");
                 }
                 else if(position == 2) {
-                    tab.setText("Distance");
+                    tab.setText("Distance\nConverter");
                 }
+
             }
         }).attach();
 
